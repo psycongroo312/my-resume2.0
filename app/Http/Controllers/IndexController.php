@@ -8,6 +8,10 @@ class IndexController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $items = config('menu.items');
+        
+        return view('index.main', ['menu'=>$items]);
     }
 }
+
+
