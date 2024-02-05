@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class IndexController extends Controller
 {
     
+    private MenuServiceInterface $ArrayMenuService;
 
     public function __construct(MenuServiceInterface $ArrayMenuService)
     {
@@ -15,7 +16,6 @@ class IndexController extends Controller
     }
     public function index()
     {
-        $items = config('menu.items');
         
         return view('index.main', ['menu'=>$this->ArrayMenuService->getMenu()]);
     }
