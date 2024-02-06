@@ -8,16 +8,14 @@ use Illuminate\Http\Request;
 class IndexController extends Controller
 {
     
-    private MenuServiceInterface $ArrayMenuService;
-
-    public function __construct(MenuServiceInterface $ArrayMenuService)
+    private MenuServiceInterface $menuService;
+    public function __construct(MenuServiceInterface $menuService) 
     {
-        $this->arrayMenuService = $ArrayMenuService;
+        $this->menuService = $menuService;
     }
-    public function index()
+        public function index()
     {
-        
-        return view('index.main', ['menu'=>$this->ArrayMenuService->getMenu()]);
+       return view('index.main', ['menu' => $this->menuService->getMenu()]);    
     }
 }
 

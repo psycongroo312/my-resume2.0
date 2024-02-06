@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [IndexController::class, 'index'])->name('abc');
-Route::get('/qwe',[IndexController::class, 'index']);
+Route::get('/', [IndexController::class, 'index']);
+Route::get('/qwe',[IndexController::class, 'index'])->name('abc');
