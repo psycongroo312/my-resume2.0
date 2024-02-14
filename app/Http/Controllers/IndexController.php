@@ -17,15 +17,12 @@ class IndexController extends Controller
     }
         public function index()
     {
-        // $projects = Technology::query()->with(['technologies'])->get();
 
-        // foreach ($projects as $project) {
-        //     $s = $project->technologies;
-        // }
-        // $a = Project::query()->create(['name' => 'Deny']);
-
-       return view('index.main', ['menu' => $this->menuService->getMenu()]);    
+         return view('index.main', ['menu' => $this->menuService->getMenu()]);    
     }
+
 }
+
+
 
 

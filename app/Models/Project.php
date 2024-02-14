@@ -12,10 +12,7 @@ class Project extends Model
     protected $fillable = [
         'name'
     ];
-    public function getId()
-    {
-        return $this->id;
-    }
+  
 
     public function technologies()
     {

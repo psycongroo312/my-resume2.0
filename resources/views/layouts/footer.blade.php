@@ -19,7 +19,7 @@
                 </div>
                 <button class="form__button">Отправить</button>
             </form>
-            <p id="kontakti" class="form__text">Или свяжитесь со мной удобным способом связи,<br> расположенным ниже</p>
+            <p id="contacts" class="form__text">Или свяжитесь со мной удобным способом связи,<br> расположенным ниже</p>
             <div class="form__footer">
                 <a class="form__network" href="">telegram</a>
                 <a class="form__network" href="">whatsapp</a>

@@ -16,26 +16,35 @@
    <section>
     <div class="wrapper">
         <h1 id="portfolio" class="wrapper__title">Портфолио</h1>
+        
+        @foreach ($projects as $project)
         <div class="portfolio__arrows">
             <img class="portfolio__arrow-one" src="{{ Vite::asset('resources/images/arrow 2.svg')}}" alt="">
             <img class="portfolio__arrow-two" src="{{ Vite::asset('resources/images/arrow 3.svg')}}" alt="">
         </div>
 
         <div class="portfolio">
-            <h3 class="portfolio__subtitle">AI DIGITAL CORPORATE PRESENTATION TEMPLATE</h3>
+            <h3 class="portfolio__subtitle">{{$project->name}}</h3>
            
         </div>
-
+        {{-- AI DIGITAL CORPORATE PRESENTATION TEMPLATE --}}
         <div class="portfolio-content">
-            <img class="portfolio__img" src="{{ Vite::asset('resources/images/8c7146ec6a815be9a81ebbeb924aeea1.png')}}">
+            <img class="portfolio__img" src="{{$project->image_url}}">
             <div class="portfolio__list">
-                <p class="portfolio__line">ux / ui design</p>
+                @foreach($project->technologies as $technology)
+                    <p class="portfolio__line">{{$technology->name}}</p>
+                @endforeach
+
+                {{-- <p class="portfolio__line">ux / ui design</p>
                 <p class="portfolio__line">development</p>
                 <p class="portfolio__line">adaptives for tablet and phone</p>
-                <p class="portfolio__line">animation support</p>
+                <p class="portfolio__line">animation support</p> --}}
+
             <button class="portfolio__button">Посмотреть</button>
             </div>
         </div>
+        @endforeach
+        
     
     </div>
    </section>

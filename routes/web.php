@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\IndexController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TechnologyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [IndexController::class, 'index']);
-Route::get('/qwe',[IndexController::class, 'index'])->name('abc');
+Route::get('#portfolio', [IndexController::class, 'index'])->name('portfolio');
+Route::get('#about',[IndexController::class, 'index'])->name('about');
+Route::get('#contacts', [IndexController::class, 'index'])->name('contacts');
+Route::get('/projects', [ProjectController::class, 'index']);
+Route::get('/projects', [TechnologyController::class, 'index']);
+

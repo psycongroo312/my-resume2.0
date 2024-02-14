@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('technologies', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('development');
+            $table->string('adaptives for tablet and phone');
+            $table->string('animation support');
             $table->timestamps();
         });
     }

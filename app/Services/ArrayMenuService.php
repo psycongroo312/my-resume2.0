@@ -9,9 +9,9 @@ class ArrayMenuService implements MenuServiceInterface
     {
         return [
             
-                ['href' => route('abc'), 'title'=> 'Портфолио'],
-                ['href' => '/qwe', 'title'=> 'Обо мне'],
-                ['href' => '/', 'title'=> 'Контакты'],
+                ['href' => route('portfolio'), 'title'=> 'Портфолио'],
+                ['href' => route('about'), 'title'=> 'Обо мне'],
+                ['href' => route('contacts'), 'title'=> 'Контакты'],
             
             
         ];
