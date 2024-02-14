@@ -12,7 +12,7 @@ class ProjectController extends Controller
        
        $projects = Project::with('technologies')->get();
 
-        return view('index.main', compact('projects'));
+        return view('index.main', compact('projects'), ['projects' => $projects]);
 
         
     }
