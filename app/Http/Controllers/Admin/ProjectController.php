@@ -10,9 +10,9 @@ class ProjectController extends Controller
     public function index()
     {
        
-       $projects = Project::with('technologies')->get();
+    //    $projects = Project::with('technologies')->get();
 
-        return view('index.main', compact('projects'), ['projects' => $projects]);
+    //     return view('index.main', compact('projects'));
 
         
     }

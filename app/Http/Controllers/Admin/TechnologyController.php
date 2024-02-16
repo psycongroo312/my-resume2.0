@@ -10,9 +10,9 @@ class TechnologyController extends Controller
 
     public function index()
     {
-        $technologies = Technology::all(); 
-
-        return view('index.main', compact('technologies'));
+        // $technologies = Technology::query()->with(['technologies'])->get();
+        
+        // return view('index.main', compact('technologies'));
 }
 
 }

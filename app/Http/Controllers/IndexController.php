@@ -17,8 +17,10 @@ class IndexController extends Controller
     }
         public function index()
     {
+        $projects = Project::with('technologies')->get();
+        $technologies = Technology::query()->with(['technologies'])->get();
 
-         return view('index.main', ['menu' => $this->menuService->getMenu()]);    
+         return view('index.main', ['menu' => $this->menuService->getMenu(), 'projects' => $projects]);    
     }
 
 }

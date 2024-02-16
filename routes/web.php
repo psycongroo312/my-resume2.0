@@ -20,6 +20,7 @@ Route::get('/', [IndexController::class, 'index']);
 Route::get('#portfolio', [IndexController::class, 'index'])->name('portfolio');
 Route::get('#about',[IndexController::class, 'index'])->name('about');
 Route::get('#contacts', [IndexController::class, 'index'])->name('contacts');
-Route::get('/projects', [ProjectController::class, 'index']);
-Route::get('/projects', [TechnologyController::class, 'index']);
+
+Route::get('/ll', [IndexController::class, 'showLogin']);
+Route::post('/lll', [IndexController::class, 'login'])->name('login');
 
